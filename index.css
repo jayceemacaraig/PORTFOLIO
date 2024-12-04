@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&family=Lemon&display=swap');
 
-:root {
-}
 
+:root {
+    --prim: #030027;
+    --prim2: #080066;
+    --prim3: #5747FF;
+    --light: #E9EDE4;
+}
 body {
+    
     height: 10000px;
     display: flex;
     flex-direction: column;
     justify-items: center;
-    background-color: gray;
+    background-color: #030027;
+    color: white;
     font-family: 'Archivo';
     margin: 0;
     padding: 0;
@@ -22,8 +28,11 @@ nav {
     z-index: 1;
     display: flex;
     justify-content: space-between;
-    padding: 15px 50px;
+    padding: 20px 50px;
     margin-bottom: 100px;
+    backdrop-filter: blur(12px);
+
+    > img {width: 5%; object-fit: cover;}
 
     > div{
         display: flex;
@@ -31,42 +40,214 @@ nav {
         justify-content: center;
 
         > a {
+            font: bold 1.1vw 'Archivo Black';
             text-decoration: none;
             align-content: center;
             color: white;
     }}
 
-    > .menu {
+    .menu {
         display: none;
     }
 }
 
 
 .hero-section {
-    
-    background-color: lightblue;
+    margin-top: 10%;
+    background-color: #030027;
     width: 80%;
-    height: 450px;
+    padding: 50px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     align-self: center;
+    box-sizing: border-box;
+
 
     > div{
 
          > h1 {
-            margin: 0;
+            margin-bottom: -15px;
+
             > span {
-            font: bold 4rem 'Archivo Black';
+            font: bold 4vw 'Archivo Black';
             color: white;
          }}
 
-         > h2 {font: bold 1.75rem 'Archivo Black'; margin: 0;}
-         > p {font: 1rem; margin-top: 0;}
+         > h2 {font: bold 2vw 'Archivo Black'; margin: 0;}
+         > p {font-size: 1.25vw; margin-top: 0;}
+
+         >div {
+            margin-bottom: 15px;
+            > img {width:10%;}
+         }
+
+         > a {
+            text-decoration: none;
+            color: white;
+            font: normal 1.2vw 'Archivo Black';
+            background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+            padding: 2% 5%;
+            border-radius: 5px;
+            
+         }
+    }
+
+    > div {
+        > img:nth-child(1) {
+            z-index: 0;
+            position: absolute;
+            width: 35%;
+            animation: rotate 10s infinite;
+        }
+        /* > img:nth:child(2) {
+            ojb
+            z-index: 4;
+        } */
     }
 }
 
 .about-section {
+    margin: 10% 0;
+    width: 80%;
+    align-self: center;
+    box-sizing: border-box;
 
+    > div:nth-child(1) {
+        > h4 {font: bold 1vw 'Archivo Black'; margin: 0; margin-left: 50px;}
+        > h1 {
+            font: bold 4.2vw 'Archivo Black';
+            margin: 0  0 10px 50px;
+        }
+
+        > p {
+            font: normal 1vw 'Archivo';
+            width: 70%;
+            margin: 1%;
+            text-align: center;
+            justify-self: center;
+        }
+    }
+    > div:nth-child(2) {
+        padding: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 50%;
+        padding: 1.8%;
+        padding-bottom: 8%;
+        border: 3px solid var(--prim3); 
+        border-radius: 24px;
+
+        > img {width: 20%; align-self: center;}
+        > h1 {font-size: 2.4vw;}
+    }
+
+}
+
+
+
+.skills-section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: gray; */
+    align-self: center;
+    box-sizing: border-box;
+    margin-bottom: 10%;
+    
+    > div:nth-child(1) {
+        align-items: end;
+        justify-items: end;
+        > h4 {font: bold 1vw 'Archivo Black'; margin: 0; margin-right: 50px;}
+        > h1 {
+            font: bold 4.2vw 'Archivo Black';
+            margin: 0  50px 10px 0;
+        }
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2%;
+        border: 3px solid var(--prim3); 
+        margin: 0px 100px;
+        border-radius: 24px;
+        padding: 2%;
+    }
+
+    .skill-card {
+        display: grid;
+        padding: 10%;
+        justify-items: center;
+
+        > img {width: 50%; align-self: center;}
+        > p {
+            font: bold 1vw 'Archivo Black';
+            margin: 0;
+
+        }
+        
+    }
+}
+
+.experience-section {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: gray; */
+    align-self: center;
+    box-sizing: border-box;
+    margin-bottom: 10%;
+
+    > div:nth-child(1) {
+        > h4 {font: bold 1vw 'Archivo Black'; margin: 0; margin-left: 50px;}
+        > h1 {
+            font: bold 4.2vw 'Archivo Black';
+            margin: 0  0 10px 50px;
+        }
+    }
+    > div:nth-child(2) {
+        /* background-color: lightblue; */
+        padding-left: 10%;
+        padding-right: 5%;
+        margin-left: 12%;
+        border-left: 10px solid white;
+        border-bottom: 10px solid white;
+        border-radius: 2%;
+
+        > div {
+            background-color: var(--prim2);
+            border-bottom: 5px solid var(--prim3);
+            border-radius: 16px;
+            padding: 2%;
+            margin-bottom: 3%;
+
+            > h1 {font: bold 2.4vw 'Archivo Black'; margin: 0;}
+            > h4 {font: normal 1.2vw 'Archivo'; margin: 0; color: var(--light);}
+            > ul > li {font: normal 1vw 'Archivo'; line-height: 1.5vw;}
+            > p {font: normal 1vw 'Archivo'; color: var(--light);}
+        }
+    }
+
+
+}
+
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+  }
+
+
+@keyframes letterAnimation {
+    0% {transform: translate();}
 }
 
