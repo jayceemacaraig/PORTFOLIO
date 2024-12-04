@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&family=Lemon&display=swap');
+
+:root {
+}
+
+body {
+    height: 10000px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: gray;
+    font-family: 'Archivo';
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    align-self: center;
+    position: fixed;
+    width: 90%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    margin-bottom: 100px;
+
+    > div{
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+
+        > a {
+            text-decoration: none;
+            align-content: center;
+            color: white;
+    }}
+
+    > .menu {
+        display: none;
+    }
+}
+
+
+.hero-section {
+    
+    background-color: lightblue;
+    width: 80%;
+    height: 450px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+
+    > div{
+
+         > h1 {
+            margin: 0;
+            > span {
+            font: bold 4rem 'Archivo Black';
+            color: white;
+         }}
+
+         > h2 {font: bold 1.75rem 'Archivo Black'; margin: 0;}
+         > p {font: 1rem; margin-top: 0;}
+    }
+}
+
+.about-section {
+
+}
+
