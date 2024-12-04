@@ -6,7 +6,7 @@
     --prim: #030027;
     --prim2: #080066;
     --prim3: #5747FF;
-    --light: #E9EDE4;
+    --light: #e9ede4c2;
 }
 body {
     
@@ -32,7 +32,7 @@ nav {
     margin-bottom: 100px;
     backdrop-filter: blur(12px);
 
-    > img {width: 5%; object-fit: cover;}
+    > img {width: 3.5%; object-fit: cover;}
 
     > div{
         display: flex;
@@ -53,7 +53,8 @@ nav {
 
 
 .hero-section {
-    margin-top: 10%;
+    margin-top: 12%;
+    margin-bottom: 4%;
     background-color: #030027;
     width: 80%;
     padding: 50px;
@@ -70,14 +71,21 @@ nav {
             margin-bottom: -15px;
 
             > span {
-            font: bold 4vw 'Archivo Black';
-            color: white;
-         }}
+                font: bold 4vw 'Archivo Black';
+                color: white;
+            }
+            >span:hover {
+                animation: bounce 0.5s ease infinite;
+            }
+        }
 
          > h2 {font: bold 2vw 'Archivo Black'; margin: 0;}
          > p {font-size: 1.25vw; margin-top: 0;}
 
          >div {
+            border-bottom: 2px solid white;
+            padding-bottom: 5%;
+            margin-top: -10px;
             margin-bottom: 15px;
             > img {width:10%;}
          }
@@ -100,23 +108,20 @@ nav {
             width: 35%;
             animation: rotate 10s infinite;
         }
-        /* > img:nth:child(2) {
-            ojb
-            z-index: 4;
-        } */
     }
 }
 
 .about-section {
-    margin: 10% 0;
+    margin-bottom: 12%;
     width: 80%;
     align-self: center;
     box-sizing: border-box;
+    border-left: 5px solid white;
 
     > div:nth-child(1) {
         > h4 {font: bold 1vw 'Archivo Black'; margin: 0; margin-left: 50px;}
         > h1 {
-            font: bold 4.2vw 'Archivo Black';
+            font: bold 3.5vw 'Archivo Black';
             margin: 0  0 10px 50px;
         }
 
@@ -129,6 +134,7 @@ nav {
         }
     }
     > div:nth-child(2) {
+        margin-left: 20px;
         padding: 20px;
         display: flex;
         justify-content: space-evenly;
@@ -157,17 +163,17 @@ nav {
     width: 80%;
     display: flex;
     flex-direction: column;
-    /* background-color: gray; */
     align-self: center;
     box-sizing: border-box;
-    margin-bottom: 10%;
+    margin-bottom: 12%;
+    border-right: 5px solid white;
     
     > div:nth-child(1) {
         align-items: end;
         justify-items: end;
         > h4 {font: bold 1vw 'Archivo Black'; margin: 0; margin-right: 50px;}
         > h1 {
-            font: bold 4.2vw 'Archivo Black';
+            font: bold 3.5vw 'Archivo Black';
             margin: 0  50px 10px 0;
         }
     }
@@ -205,11 +211,12 @@ nav {
     align-self: center;
     box-sizing: border-box;
     margin-bottom: 10%;
+    border-left: 5px solid white;
 
     > div:nth-child(1) {
         > h4 {font: bold 1vw 'Archivo Black'; margin: 0; margin-left: 50px;}
         > h1 {
-            font: bold 4.2vw 'Archivo Black';
+            font: bold 3.5vw 'Archivo Black';
             margin: 0  0 10px 50px;
         }
     }
@@ -229,15 +236,108 @@ nav {
             padding: 2%;
             margin-bottom: 3%;
 
-            > h1 {font: bold 2.4vw 'Archivo Black'; margin: 0;}
-            > h4 {font: normal 1.2vw 'Archivo'; margin: 0; color: var(--light);}
-            > ul > li {font: normal 1vw 'Archivo'; line-height: 1.5vw;}
-            > p {font: normal 1vw 'Archivo'; color: var(--light);}
+            > h1 {font: bold 1.7vw 'Archivo Black'; margin: 0;}
+            > h4 {font: normal .9vw 'Archivo'; margin: 1%; color: var(--light);}
+            > ul { margin: 1% 0;> li {font: normal 1vw 'Archivo'; line-height: 1.5vw; width: 80%;}}
+            > p {font: normal .8vw 'Archivo'; color: var(--light);}
+        }
+    }
+}
+
+.project-section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    box-sizing: border-box;
+    margin-bottom: 12%;
+    border-right: 5px solid white;
+    background-color: gray;
+
+    > div:nth-child(1) {
+        align-items: end;
+        justify-items: end;
+        > h4 {font: bold 1vw 'Archivo Black'; margin: 0; margin-right: 50px;}
+        > h1 {
+            font: bold 3.5vw 'Archivo Black';
+            margin: 0 50px 10px 0;
         }
     }
 
+    .project-slider {
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative; /* Add relative position to allow absolute positioning for buttons */
 
+        .slider-container { 
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%; /* Ensure the slider takes full width */
+        }
+
+        button {
+            position: absolute; /* Fix the position of buttons */
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 2em;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 20px; /* Adjust positioning */
+        }
+
+        .next {
+            right: 20px; /* Adjust positioning */
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    .project-card {
+        flex: 0 0 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center content within each project card */
+
+        > img {
+            width: 50%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        > h3 {
+            font: bold 2vw 'Archivo Black';
+            margin: 2% 0 0 0;
+        }
+
+        > p {
+            font: normal 1vw 'Archivo';
+            margin: 1% 0 4% 0;
+        }
+
+        > a {
+            text-decoration: none;
+            color: white;
+            font: normal 1.2vw 'Archivo Black';
+            background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+            padding: 2% 5%;
+            border-radius: 5px;
+        }
+    }
 }
+
 
 
 @keyframes rotate {
@@ -247,7 +347,31 @@ nav {
   }
 
 
-@keyframes letterAnimation {
-    0% {transform: translate();}
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-10px);
+    }
+    40% {
+      transform: translateY(0);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+    80% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-2px);
+    }
 }
+  
 
+@media (max-width: 768px) {
+    .project-card {
+      flex: 0 0 90%;
+    }
+  }
+  
