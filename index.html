@@ -8,7 +8,8 @@
 
 </head>
 <body>
-    
+    <div class="background"></div>
+    <img src="https://raphaelenciso.com/heroIcons.svg" alt="" class="bg">
     <nav>
         <img src="src/LOGO.png" alt="">
         <div>
@@ -42,7 +43,6 @@
         </div>
         
         <div>
-            <img src="https://raphaelenciso.com/heroIcons.svg" alt="">
             <img src="src/ME.png" alt="">
         </div>
     </section>
@@ -174,23 +174,33 @@
 
         <div class="project-slider">
             <div class="slider-container">
+                
                 <div class="project-card">
-                    <img src="src/CHUABLES.png" alt="CHUABLES">
-                    <h3>Chuables Bakeshop</h3>
-                    <p>A promotional website with a content of the bakeshop where users can visit and inquire with the shop through online</p>
-                    <a href="">Visit</a>
+                    <div class="project-container">
+                        <img src="src/CHUABLES.png" alt="CHUABLES">
+                        <h3>Chuables Bakeshop</h3>
+                        <p>A promotional website with a content of the bakeshop where users can visit and inquire with the shop through online</p>
+                        <a href="">Visit</a>
+                    </div>
                 </div>
+
                 <div class="project-card">
-                    <img src="src/FACEBOOK.png" alt="FACEBOOK">
-                    <h3>Facebook Clone</h3>
-                    <p>A Front End design for social media app (facebook clone) using Material UI components and NextJS.</p>
-                    <a href="">Visit</a>
+                    <div class="project-container">
+                        <img src="src/FACEBOOK.png" alt="FACEBOOK">
+                        <h3>Facebook Clone</h3>
+                        <p>A Front End design for social media app (facebook clone) using Material UI components and NextJS.</p>
+                        <a href="">Visit</a>
+                    </div>
                 </div>
+                
                 <div class="project-card">
-                    <img src="src/KOUR.png" alt="KOUR.IO">
-                    <h3>Kour.io</h3>
-                    <p> an action-packed, multiplayer FPS game that offers a dynamic and exciting gameplay experience. Players engage in fast-paced battles across various maps, with a wide selection of guns and game modes to choose from.</p>
-                    <a href="">Visit</a>
+                    <div class="project-container">
+                        <img src="src/KOUR.png" alt="KOUR.IO">
+                        <h3>Kour.io</h3>
+                        <p> an action-packed, multiplayer FPS game that offers a dynamic and exciting gameplay experience. Players engage in fast-paced battles across various maps, with a wide selection 
+                        of guns and game modes to choose from.</p>
+                        <a href="">Visit</a>
+                    </div>
                 </div>
             </div>
             <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
@@ -199,11 +209,23 @@
     </section>
 
     <section class="contact-section">
+        <div>
+            <h4>GET IN TOUCH</h4>
+            <h1>Contacts.</h1>
+        </div>
+        <form class="contact-form">
+            <input type="text" id="name" name="name" placeholder="What is your Name?" required>
 
+            <input type="email" id="email" name="email" placeholder="What is your Email Address?" required>
+        
+            <textarea id="message" name="message" placeholder="What do you want to say?" rows="5" required></textarea>
+        
+            <button type="submit">Send</button>
+          </form>        
     </section>
 
     <footer>
-
+        <p>Copyright © 2024 Jay Cee Macaraig. | All Right Reserved.</p>
     </footer>
 
     <script>
