@@ -8,26 +8,22 @@
 
 </head>
 <body>
-    <div class="background"></div>
+
     <img src="https://raphaelenciso.com/heroIcons.svg" alt="" class="bg">
     <nav>
-        <img src="src/LOGO.png" alt="">
-        <div>
-            <a href="">ABOUT</a>
-            <a href="">SKILLS</a>
-            <a href="">PROJECT</a>
-            <a href="">CONTACT</a>
+        <a href="#hero"><img src="src/LOGO.png" alt="LOGO"></a>
+        <div class="desktop">
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#project">PROJECT</a>
+            <a href="#contact">CONTACT</a>
         </div>
-        <div class="menu">
-            <div class="1"></div>
-            <div class="2"></div>
-            <div class="3"></div>
-            
-        </div>
+        <img src="https://img.icons8.com/?size=100&id=36389&format=png&color=FFFFFF" alt="MENU" class="menu">
     </nav>
+    
 
 
-    <section class="hero-section">
+    <section class="hero-section" id="hero">
         <div>
             <h1>
                 <span>H</span><span>i</span><span> </span><span>I</span><span>'</span><span>m</span><span> </span><span>J</span><span>a</span><span>y</span><span> </span><span>C</span><span>e</span><span>e</span>
@@ -35,19 +31,18 @@
             <h2>A web developer</h2>
             <p>A Full-Stack Developer based in Philippines</p>
             <div>
-                <img src="https://img.icons8.com/?size=100&id=118466&format=png&color=FFFFFF" alt="">
-                <img src="https://img.icons8.com/?size=100&id=62856&format=png&color=FFFFFF" alt="">
-                <img src="https://img.icons8.com/?size=100&id=ZO0pAGpcWYrB&format=png&color=FFFFFF" alt="">
+                <a target="_blank" href="https://www.facebook.com/Name.Jaycee"><img src="https://img.icons8.com/?size=100&id=118466&format=png&color=FFFFFF" alt="">Jay Cee I. Macaraig</a>
+                <a target="_blank" href="https://github.com/jayceemacaraig"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=FFFFFF" alt="">jayceemacaraig</a>
+                <a target="_blank" href="https://www.linkedin.com/in/jay-cee-204b18270/"><img src="https://img.icons8.com/?size=100&id=ZO0pAGpcWYrB&format=png&color=FFFFFF" alt="">Jay Cee</a>
             </div>
-            <a href="">CONTACT ME </a>
+            <a href="#contact">CONTACT ME </a>
         </div>
         
-        <div>
-            <img src="src/ME.png" alt="">
-        </div>
+        <img src="src/ME.png" alt="menu">
+
     </section>
 
-    <section class="about-section">
+    <section class="about-section" id="about">
         <div>
             <h4>INTRODUCTION</h4>
             <h1>About Me.</h1>
@@ -72,7 +67,7 @@
         </div>
     </section>
 
-    <section class="skills-section">
+    <section class="skills-section" id="skills">
         <div>
             <h4>TECHNOLOGIES</h4>
             <h1>Skills.</h1>
@@ -166,7 +161,7 @@
         </div>
     </section>
 
-    <section class="project-section">
+    <section class="project-section" id="project">
         <div>
             <h4>MY WORKS</h4>
             <h1>Projects.</h1>
@@ -180,7 +175,7 @@
                         <img src="src/CHUABLES.png" alt="CHUABLES">
                         <h3>Chuables Bakeshop</h3>
                         <p>A promotional website with a content of the bakeshop where users can visit and inquire with the shop through online</p>
-                        <a href="">Visit</a>
+                        <a href="https://jayceemacaraig.github.io/PELEC201--CHUABLES-/" target="_blank">Visit</a>
                     </div>
                 </div>
 
@@ -189,7 +184,7 @@
                         <img src="src/FACEBOOK.png" alt="FACEBOOK">
                         <h3>Facebook Clone</h3>
                         <p>A Front End design for social media app (facebook clone) using Material UI components and NextJS.</p>
-                        <a href="">Visit</a>
+                        <a href="https://www.facebook.com/" target="_blank">Visit</a>
                     </div>
                 </div>
                 
@@ -199,7 +194,7 @@
                         <h3>Kour.io</h3>
                         <p> an action-packed, multiplayer FPS game that offers a dynamic and exciting gameplay experience. Players engage in fast-paced battles across various maps, with a wide selection 
                         of guns and game modes to choose from.</p>
-                        <a href="">Visit</a>
+                        <a href="https://kour.io/" target="_blank">Visit</a>
                     </div>
                 </div>
             </div>
@@ -208,7 +203,7 @@
         </div>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
         <div>
             <h4>GET IN TOUCH</h4>
             <h1>Contacts.</h1>
@@ -228,6 +223,13 @@
         <p>Copyright © 2024 Jay Cee Macaraig. | All Right Reserved.</p>
     </footer>
 
+    <div class="nav-menu">
+        <a href="#about">ABOUT</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#project">PROJECT</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+
     <script>
         let currentIndex = 0;
 
@@ -245,7 +247,7 @@
 
             const newTransform = -currentIndex * 100;
             document.querySelector('.slider-container').style.transform = `translateX(${newTransform}%)`;
-            }
+            }     
       </script>
 </body>
 </html>
