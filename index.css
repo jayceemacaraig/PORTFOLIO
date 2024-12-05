@@ -478,7 +478,7 @@ footer {
 .nav-menu {
     display: none;
     position: fixed;
-    top: 40px;
+    top: 6.8%;
     align-self: center;
     backdrop-filter: blur(12px);
     width: 80%;
@@ -665,6 +665,7 @@ footer {
                 align-content: center;
                 justify-items: center;
                 align-items: center;
+                border-bottom: 2px solid white;
                 
                 > a {
                     margin-bottom: 2%;
