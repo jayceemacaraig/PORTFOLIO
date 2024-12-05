@@ -598,6 +598,7 @@ footer {
         > .grid-container {
             height: 50vw;
             grid-template-columns: repeat(3, 1fr);
+            > div > p {font-size: 1.4vw;}
         }
     }
 
