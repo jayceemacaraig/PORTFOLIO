@@ -23,9 +23,9 @@ body {
     padding: 0;
     background: linear-gradient(45deg, #030027, #070066, #04003D);
     background-size: 400% 400%;
-    animation: gradientAnimation 10s ease infinite;
+    animation: gradientAnimation 10s ease infinite; /* This is for the background animation, which changes gradient*/
 }
-
+ 
 .bg {
     filter: opacity(40%);
     width: 100%;
@@ -509,7 +509,7 @@ footer {
     100% {transform: rotate(360deg);}
 }
 
-
+/* Gradient animation for the background */
 @keyframes gradientAnimation {
     0% {
       background-position: 0% 50%; 
@@ -637,7 +637,7 @@ footer {
         display: none;
     }
 
-    /* .nav-menu {display: initial;} */
+
     nav {
         > a > img {width: 35%; height: 90%;}
         > .menu , .back {
