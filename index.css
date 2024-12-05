@@ -639,8 +639,9 @@ footer {
 
 
     nav {
-        > a > img {width: 35%; height: 90%;}
+        > a > img {width: 35%; height: 60%; align-self: center;}
         > .menu , .back {
+            align-self: center;
             display: initial;
             height: 60%;
         }
