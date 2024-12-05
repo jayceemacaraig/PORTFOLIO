@@ -231,19 +231,35 @@
     </div>
 
     <script>
+
+        // THIS SECTION CODE IS FOR THE MOBILE NAVIGATION
         const menu = document.querySelector('.menu');
+        const back = document.querySelector('.back');
         const mobile = document.querySelector('.nav-menu');
 
         menu.addEventListener('click', () => {
-            mobile.style.display = 'initial';
-        })
+            if (menu.classList.contains('menu')) {
+                mobile.style.display = 'initial';
+                menu.src = 'https://img.icons8.com/?size=100&id=40217&format=png&color=FFFFFF';
+                menu.classList.remove('menu');
+                menu.classList.add('back');
+            } else if (menu.classList.contains('back')) {
+                mobile.style.display = 'none';
+                menu.src = 'https://img.icons8.com/?size=100&id=36389&format=png&color=FFFFFF';
+                menu.classList.remove('back');
+                menu.classList.add('menu');
+            }
+        });
 
         window.addEventListener('resize', () => {
             if (window.innerWidth >= 425) {
                 mobile.style.display = 'none';
             }});
+        
+        // ------------------------------------------------
 
 
+        // THIS SECTION CODE IS FOR THE PROJECT SLIDER
         let currentIndex = 0;
 
             function moveSlide(direction) {
@@ -261,6 +277,8 @@
             const newTransform = -currentIndex * 100;
             document.querySelector('.slider-container').style.transform = `translateX(${newTransform}%)`;
             }     
+
+        // ------------------------------------------------
       </script>
 </body>
 </html>

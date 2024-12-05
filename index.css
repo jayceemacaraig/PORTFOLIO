@@ -63,7 +63,7 @@ nav {
             color: white;
     }}
 
-    .menu {
+    .menu , .back {
         display: none;
         cursor: pointer;
     }
@@ -640,7 +640,7 @@ footer {
     /* .nav-menu {display: initial;} */
     nav {
         > a > img {width: 35%; height: 90%;}
-        > .menu {
+        > .menu , .back {
             display: initial;
             height: 60%;
         }
