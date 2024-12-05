@@ -232,17 +232,15 @@
 
     <script>
         const menu = document.querySelector('.menu');
-        const back = document.querySelector('.back');
         const mobile = document.querySelector('.nav-menu');
 
         menu.addEventListener('click', () => {
             mobile.style.display = 'initial';
         })
 
-
         window.addEventListener('resize', () => {
-            if (window.innerWidth >= 790) {
-                menu.style.display = 'none';
+            if (window.innerWidth >= 425) {
+                mobile.style.display = 'none';
             }});
 
 
